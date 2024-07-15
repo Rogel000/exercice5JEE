@@ -2,13 +2,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Dogs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-<h1><%= "Hello" %>
-</h1>
-<br/>
-<a href="dogs/add"> Add a dog</a>
-<a href="dogs/list"> dog list</a>
+<div class="container mt-4">
+    <div class="text-center">
+        <h1>Dogs</h1>
+        <br>
+        <a class="btn btn-primary mr-2" href="dogs/add">Add a dog</a>
+        <a class="btn btn-secondary" href="dogs/list">Dog list</a>
+    </div>
+</div>
+
 </body>
 </html>
