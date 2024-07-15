@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Logger;
 
-@WebServlet(value = "/dogs/*")
+@WebServlet(value = {"/list", "/add","/dogs/*"})
 public class DogServlet extends HttpServlet {
     private List<Dog> dogs;
     private AtomicLong idCounter;
@@ -81,9 +81,14 @@ public class DogServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println(req.getParameter("name"));
+        System.out.println(req.getParameter("breed"));
+        System.out.println(req.getParameter("birthdate"));
+
         String name = req.getParameter("name");
         String breed = req.getParameter("breed");
-        LocalDate birthDate = LocalDate.parse(req.getParameter("birthDate"));
+        LocalDate birthDate = LocalDate.parse(req.getParameter("birthdate"));
+
 
         Dog dog = new Dog(idCounter.incrementAndGet(), name, breed, birthDate);
         dogs.add(dog);

@@ -12,20 +12,20 @@
         <div class="col-md-6">
             <div class="card mt-5">
                 <div class="card-body bg-dark text-light rounded">
-                    <h3 class="card-title">-Add a Dog-</h3>
+                    <h3 class="card-title">- Add a Dog -</h3>
                     <hr>
-                    <form>
+                    <form method="post" action="${pageContext.request.contextPath}/add">
                         <div class="form-group">
                             <label for="name">Name:</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter dog's name">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter dog's name" required>
                         </div>
                         <div class="form-group">
                             <label for="breed">Breed:</label>
-                            <input type="text" class="form-control" id="breed" placeholder="Enter dog's breed">
+                            <input type="text" class="form-control" id="breed" name="breed" placeholder="Enter dog's breed" required>
                         </div>
                         <div class="form-group">
                             <label for="birthdate">Birth date:</label>
-                            <input type="date" class="form-control" id="birthdate">
+                            <input type="date" class="form-control" id="birthdate" name="birthdate" required>
                         </div>
                         <hr>
                         <div class="d-flex justify-content-end">
