@@ -110,6 +110,6 @@ public class DogServlet extends HttpServlet {
             return;
         }
 
-        resp.sendRedirect(req.getContextPath() + "/list");
+        resp.sendRedirect(req.getContextPath() + "/dogs/list");
     }
 }
