@@ -12,11 +12,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card mt-5">
-                <div class="card-body bg-dark text-light rounded">
+                <div class="card-body bg-dark text-light rounded ">
                     <h3 class="card-title">- Dogs List -</h3>
                     <hr>
                     <% if (!dogs.isEmpty()) { %>
-                    <table class="table table-dark mt-4">
+                    <table class="table table-dark mt-4  ">
                         <thead>
                         <tr>
                             <th>#</th>
@@ -38,7 +38,8 @@
                             <td><%= dogs.get(i).getBirthDate() %>
                             </td>
                             <td>
-                                <a href="<%= request.getContextPath() %>/dogs/view?id=<%= dogs.get(i).getId() %>" class="btn btn-info btn-sm">
+                                <a href="<%= request.getContextPath() %>/dogs/view?id=<%= dogs.get(i).getId() %>"
+                                   class="btn btn-info btn-sm">
                                     <i class="bi bi-eye"></i> Details
                                 </a>
                             </td>
@@ -50,7 +51,11 @@
                     <p>There is no dog in the database yet!</p>
                     <% } %>
                     <hr>
-                    <div class="d-flex justify-content-end mt-3">
+                    <div class="d-flex justify-content-between mt-3">
+                        <button type="button" class="btn border border-success text-success"
+                                onclick="window.history.back();">
+                            <i class="bi bi-arrow-left-circle"></i> Return
+                        </button>
                         <a href="add" class="btn border border-success text-success">
                             <i class="bi bi-plus-circle"></i> Add a Dog
                         </a>
